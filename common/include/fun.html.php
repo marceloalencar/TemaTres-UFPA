@@ -2054,6 +2054,7 @@ GLOBAL $CFG;
         //<![endif]-->
     }
     $rows.='<link href="'.T3_WEBPATH.'css/t3style.css" rel="stylesheet">' ;
+    $rows.='<link href="'.T3_WEBPATH.'css/ufpa.css" rel="stylesheet">' ;
     $rows.=$metadata["metadata"];
     $rows.=' <link type="image/x-icon" href="'.T3_WEBPATH.'images/tematres.ico" rel="icon" /><link type="image/x-icon" href="'.T3_WEBPATH.'images/tematres.ico" rel="shortcut icon" />' ;
     /* define url BASE to links and cross origin 
@@ -2076,15 +2077,15 @@ function HTMLnavHeader()
     $focus=(array2value("taskSearch",$_GET)=='1') ? 'autofocus':'' ;
 
     // here img
-    $rows='<div class="container">
-          <div class="header">
+    $rows='<div id="cabecalho" class="cabecalho">
+    <img alt="Logo Arquivo Central" height="35" src="'.T3_WEBPATH.'images/logo.png">
               <h1><a href="'.URL_BASE.'index.php" title="'.$_SESSION["CFGTitulo"].': '.MENU_ListaSis.'">'.$_SESSION["CFGTitulo"].'</a></h1>
               '.$_SESSION[$_SESSION["CFGURL"]]["HTMLextraHeader"].'
-         </div>
-        </div>' ;
+    <img alt="Brasão UFPA" height="35" src="'.T3_WEBPATH.'images/brasao.png">
+              </div>' ;
 
 
-    $rows.='<nav class="navbar navbar-inverse" role="navigation">
+    $rows.='<nav class="navbar" role="navigation">
   <div class="container">
     <div class="navbar-header">
      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
@@ -2102,6 +2103,9 @@ function HTMLnavHeader()
         <li>
 		      <a title="'.MENU_Sobre.'" href="'.URL_BASE.'sobre.php">'.MENU_Sobre.'</a>
 	    </li>
+        <li>
+              <a title="Arquivo Digital" href="https://arquivodigital.ufpa.br/">Arquivo Digital</a>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-left">' ;
 

@@ -66,7 +66,9 @@ $metadata=do_meta_tag();
         }
     };
     ?>
+</div>
 </div><!-- /.container -->
+<div class="push"></div>
 <!-- ###### Footer ###### -->
 
 <div id="footer" class="footer">
@@ -92,6 +94,10 @@ $metadata=do_meta_tag();
       </p>
         <?php echo doMenuLang(); ?>
         </div>
+    </div>
+    <div id="info-footer" class="text-center">
+        <strong>Universidade Federal do Pará</strong><br>
+        Rua Augusto Corrêa, 1 - Guamá - Belém/PA - Brasil
     </div>
 
           </div>
