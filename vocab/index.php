@@ -53,7 +53,9 @@ if (!$_GET["letra"]) {
 
             echo '  <a class="label label-info" href="'.URL_BASE.'xml.php?rss=true" title="RSS"><span class="icon icon-rss"></span> RSS</a>';
             echo '  <a class="label label-info" href="'.URL_BASE.'index.php?s=n" title="'.ucfirst(LABEL_showNewsTerm).'"><span class="glyphicon glyphicon-fire"></span> '.ucfirst(LABEL_showNewsTerm).'</a>';
-            echo '  <a class="label label-info" href="'.URL_BASE.'login-modal.php" title="'.MENU_MiCuenta.'" data-toggle="modal" data-target="#remoteModal">'.MENU_MiCuenta.'</a>';
+            if (evalUserLevel($_SESSION[$_SESSION["CFGURL"]])==0) {
+                echo '  <a class="label label-info" href="'.URL_BASE.'login-modal.php" title="'.MENU_MiCuenta.'" data-toggle="modal" data-target="#remoteModal">'.MENU_MiCuenta.'</a>';
+            }
             ?>
         </p>
             <?php echo doMenuLang(array2value("tema_id",$metadata["arraydata"])); ?>

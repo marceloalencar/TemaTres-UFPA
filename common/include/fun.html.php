@@ -2097,7 +2097,7 @@ function HTMLnavHeader()
       <a class="navbar-brand" title="'.MENU_Inicio.' '.$_SESSION["CFGTitulo"].'" href="'.URL_BASE.'index.php">'.MENU_Inicio.'</a>
     </div>
     <div class="navbar-collapse collapse" id="navbar-collapsible">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-left">
         <li><a title="'.LABEL_busqueda.'" href="'.URL_BASE.'index.php?xsearch=1">'.ucfirst(LABEL_BusquedaAvanzada).'</a></li>
 
         <li>
@@ -2105,9 +2105,7 @@ function HTMLnavHeader()
 	    </li>
         <li>
               <a title="Arquivo Digital" href="https://arquivodigital.ufpa.br/">Arquivo Digital</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-left">' ;
+        </li>';
 
                 //hay sesion de usuario
     if (evalUserLevel($_SESSION[$_SESSION["CFGURL"]])>0) {
@@ -2116,9 +2114,9 @@ function HTMLnavHeader()
 
     $rows.='</ul>
       <form method="get" id="simple-search" name="simple-search" action="'.URL_BASE.'index.php" class="navbar-form">
-        <div class="form-group" style="display:inline;">
-          <div class="fill col2">
-            <input class="form-control" id="query" name="'.FORM_LABEL_buscar.'"  type="search" '.$focus.'>
+        <div class="form-group">
+          <div class="fill col2" style="display: flex; flex-wrap: nowrap;">
+            <input class="form-control" style="flex-grow: 1 !important; margin-right: 0.5rem;" id="query" name="'.FORM_LABEL_buscar.'"  type="search" '.$focus.'>
             <input class="btn btn-default" type="submit" value="'.LABEL_Buscar.'" />
             <input type="hidden" name="taskSearch" id="taskSearch" value="1" />
           </div>
