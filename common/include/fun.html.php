@@ -2112,8 +2112,6 @@ function HTMLnavHeader()
                 //hay sesion de usuario
     if (evalUserLevel($_SESSION[$_SESSION["CFGURL"]])>0) {
         $rows.=HTMLmainMenu();
-    } else {//no hay session de usuario
-        $rows.='<li><a href="login-modal.php" title="'.MENU_MiCuenta.'" data-toggle="modal" data-target="#remoteModal">'.MENU_MiCuenta.'</a></li>' ;
     };
 
     $rows.='</ul>

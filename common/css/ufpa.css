@@ -2,20 +2,6 @@
     min-height: 60% !important;
 }
 
-#footer {
-    height: unset !important;
-    background-color: rgb(191, 23, 43);
-}
-
-#info-footer {
-    background-color: rgb(117, 22, 33);
-    color: rgb(248, 249, 250);
-    padding-top:1rem !important;
-    padding-bottom:1rem !important;
-    padding-right: 1rem !important;
-    padding-left: 1rem !important;
-}
-
 #cabecalho {
     display: flex;
     flex-wrap: wrap;
@@ -101,4 +87,35 @@
 
 .navbar-toggle .icon-bar {
     background-color: rgb(255, 255, 255);
+}
+
+#footer {
+    height: unset !important;
+    background-color: rgb(191, 23, 43);
+}
+
+#info-footer {
+    background-color: rgb(117, 22, 33);
+    color: rgb(248, 249, 250);
+    padding-top:1rem !important;
+    padding-bottom:1rem !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+
+#footer #setLang {
+    background-image: unset;
+    background-color: rgb(191, 23, 43);
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.label-info {
+    background-color: transparent !important;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.label-info[href]:hover {
+    background-color: rgb(117, 22, 33) !important;
 }
