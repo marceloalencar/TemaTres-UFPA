@@ -72,35 +72,33 @@ $metadata=do_meta_tag();
 <!-- ###### Footer ###### -->
 
 <div id="footer" class="footer">
-      <div class="container">
-        <div class="row">
-          <a href="https://www.vocabularyserver.com/" title="TemaTres: vocabulary server" target="_blank">
-            <img src="<?php echo T3_WEBPATH;?>/images/tematres-logo.gif" width="42" alt="TemaTres"/></a>
-            <a href="https://www.vocabularyserver.com/" title="TemaTres: vocabulary server" target="_blank">TemaTres</a>
-<p class="navbar-text pull-left">
-        <?php
-        //are enable SPARQL
-        if (CFG_ENABLE_SPARQL==1) {
-            echo '<a class="label label-info" href="'.URL_BASE.'sparql.php" title="'.LABEL_SPARQLEndpoint.'">'.LABEL_SPARQLEndpoint.'</a>';
-        }
+    <div class="container">
+        <p class="navbar-text pull-left">
+            <?php
+                //are enable SPARQL
+                if (CFG_ENABLE_SPARQL==1) {
+                    echo '<a class="label label-info" href="'.URL_BASE.'sparql.php" title="'.LABEL_SPARQLEndpoint.'">'.LABEL_SPARQLEndpoint.'</a>';
+                }
 
-        if (CFG_SIMPLE_WEB_SERVICE==1) {
-            echo '  <a class="label label-info" href="'.URL_BASE.'services.php" title="API"><span class="glyphicon glyphicon-share"></span> API</a>';
-        }
+                if (CFG_SIMPLE_WEB_SERVICE==1) {
+                    echo '  <a class="label label-info" href="'.URL_BASE.'services.php" title="API"><span class="glyphicon glyphicon-share"></span> API</a>';
+                }
 
-          echo '  <a class="label label-info" href="'.URL_BASE.'xml.php?rss=true" title="RSS"><span class="icon icon-rss"></span> RSS</a>';
-          echo '  <a class="label label-info" href="'.URL_BASE.'index.php?s=n" title="'.ucfirst(LABEL_showNewsTerm).'"><span class="glyphicon glyphicon-fire"></span> '.ucfirst(LABEL_showNewsTerm).'</a>';
-        ?>
-      </p>
+                echo '  <a class="label label-info" href="'.URL_BASE.'xml.php?rss=true" title="RSS"><span class="icon icon-rss"></span> RSS</a>';
+                echo '  <a class="label label-info" href="'.URL_BASE.'index.php?s=n" title="'.ucfirst(LABEL_showNewsTerm).'"><span class="glyphicon glyphicon-fire"></span> '.ucfirst(LABEL_showNewsTerm).'</a>';
+                if (evalUserLevel($_SESSION[$_SESSION["CFGURL"]])==0) {
+                    echo '  <a class="label label-info" href="'.URL_BASE.'login-modal.php" title="'.MENU_MiCuenta.'" data-toggle="modal" data-target="#remoteModal">'.MENU_MiCuenta.'</a>';
+                }
+            ?>
+        </p>
         <?php echo doMenuLang(); ?>
-        </div>
     </div>
     <div id="info-footer" class="text-center">
         <strong>Universidade Federal do Pará</strong><br>
         Rua Augusto Corrêa, 1 - Guamá - Belém/PA - Brasil
     </div>
 
-          </div>
+</div>
 <?php echo HTMLjsInclude();?>
 </body>
 </html>
