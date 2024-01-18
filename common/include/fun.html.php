@@ -2081,7 +2081,7 @@ function HTMLnavHeader()
     <img alt="Logo Arquivo Central" height="35" src="'.T3_WEBPATH.'images/logo.png">
               <h1><a href="'.URL_BASE.'index.php" title="'.$_SESSION["CFGTitulo"].': '.MENU_ListaSis.'">'.$_SESSION["CFGTitulo"].'</a></h1>
               '.$_SESSION[$_SESSION["CFGURL"]]["HTMLextraHeader"].'
-    <img alt="Brasão UFPA" height="35" src="'.T3_WEBPATH.'images/brasao.png">
+    <img alt="Brasão UFPA" height="70" src="'.T3_WEBPATH.'images/brasao.png">
               </div>' ;
 
 
